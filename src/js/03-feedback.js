@@ -40,7 +40,7 @@ function onSubmit(event) {
 
 try {
   const parsedData = JSON.parse(localStorage.getItem('feedback-form-state'));
-  if (parsedData.email !== '' && parsedData.message !== '') {
+  if (parsedData.email !== '' || parsedData.message !== '') {
     // console.log('Local storage is NOT empty');
     emailInput.value = parsedData.email;
     messageInput.value = parsedData.message;
